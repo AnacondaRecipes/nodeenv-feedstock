@@ -42,11 +42,13 @@ test:
     - tests
 
 about:
-  home: https://github.com/ekalinin/nodeenv
+  home: https://ekalinin.github.io/nodeenv/
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Node.js virtual environment builder
+  dev_url: https://github.com/ekalinin/nodeenv
+  doc_url: https://ekalinin.github.io/nodeenv/
 
 extra:
   recipe-maintainers:
