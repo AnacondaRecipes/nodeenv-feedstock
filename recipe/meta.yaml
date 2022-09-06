@@ -12,18 +12,18 @@ source:
 
 build:
   number: 0
+  skip: True  # [py<37]
   entry_points:
     - nodeenv = nodeenv:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python
     - setuptools
   run:
-    - python 2.7|>=3.7
+    - python
     - setuptools  # depends on pkg_resources at runtime
 
 test:
