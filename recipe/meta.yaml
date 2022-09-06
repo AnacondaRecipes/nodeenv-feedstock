@@ -22,6 +22,7 @@ requirements:
     - pip
     - python
     - setuptools
+    - wheel
   run:
     - python
     - setuptools  # depends on pkg_resources at runtime
