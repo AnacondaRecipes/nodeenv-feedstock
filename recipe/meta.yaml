@@ -30,7 +30,7 @@ requirements:
   run:
     - python
     - setuptools  # depends on pkg_resources at runtime
-
+ 
 test:
   commands:
     - pip check
