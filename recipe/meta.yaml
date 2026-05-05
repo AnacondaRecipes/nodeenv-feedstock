@@ -1,13 +1,13 @@
 {% set name = "nodeenv" %}
-{% set version = "1.9.1" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6ec12890a2dab7946721edbfbcd91f3319c6ccc9aec47be7c7e6b7011ee6645f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 996c191ad80897d076bdfba80a41994c2b47c68e224c542b48feba42ba00f8bb
   patches:
     # Update 1: patch still needed.
     - tests_windows.patch  # [win]
@@ -20,11 +20,10 @@ build:
   entry_points:
     - nodeenv = nodeenv:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  skip: True  # [py<37]
+  skip: true  # [py<37]
 
 requirements:
   build:
-    - m2-patch  # [win]
   host:
     - pip
     - python
